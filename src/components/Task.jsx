@@ -13,8 +13,12 @@ function Task({ taskData }) {
     e.preventDefault();
     const res = new FormData(e.target);
     const formData = Object.fromEntries(res.entries());
-    dispatch(EDIT_TASK({ id, task: formData.input }));
-    setShowEditInput(false);
+    if (formData.input) {
+      dispatch(EDIT_TASK({ id, task: formData.input }));
+      setShowEditInput(false);
+    } else {
+      alert("Input field cannot be empty!");
+    }
   };
 
   return (
