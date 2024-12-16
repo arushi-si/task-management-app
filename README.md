@@ -1,5 +1,10 @@
 # Task Management App
 
+## Deployment
+
+- You can see the deployed version here:
+  https://task-management-app-six-gamma.vercel.app/
+
 ## How to run
 
 - Install packages with `npm i` command
